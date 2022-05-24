@@ -1,23 +1,8 @@
 from __future__ import print_function, division
 
-import re
-import sys
-
 from pyspark.sql import SparkSession
 
-from data_cleaning import map_logs, flat
-
-
-def filter_logs(line):
-    match_upload = re.search(r"(^\[\S+ \S+]) \[INFO]: 群 (\S+) 内 ([\s\S]+) 上传了文件: ([\s\S]+)", line)
-    match_member_add = re.search(r"(^\[\S+ \S+]) \[INFO]: 新成员 (\S+) 进入了群 ([\s\S]+)", line)
-    match_member_leave = re.search(r"(^\[\S+ \S+]) \[INFO]: 成员 (\S+) 离开了群 ([\s\S]+)", line)
-
-    if match_upload is None and match_member_add is None and match_member_leave is None:
-        return True
-    else:
-        return False
-
+from data_cleaning.funs import filter_logs, map_logs, flat
 
 """  新建spark应用  """
 spark = SparkSession.builder.master("local").appName("app").getOrCreate()
@@ -26,7 +11,7 @@ sc = spark.sparkContext
 """  读取文件并建立dataframe  """
 files = sc.textFile("./2022-05-23.log")
 
-logs = files.map(map_logs)
+logs = files.filter(filter_logs).map(map_logs)
 
 logs_df = logs.toDF()
 
@@ -44,3 +29,4 @@ while i < len(logs_list):
 
 logs_table = spark.createDataFrame(data=logs_list, schema=["time", "group", "user", "message"]).drop("_5")
 logs_table = logs_table.filter(logs_table['user'] != 'self')
+logs_table.show()
