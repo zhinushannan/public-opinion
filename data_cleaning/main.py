@@ -28,5 +28,5 @@ while i < len(logs_list):
         i += 1
 
 logs_table = spark.createDataFrame(data=logs_list).rdd.map(map_remove_message_some).toDF()
-logs_table = logs_table.filter(logs_table["user"] != "self")
-
+logs_table = logs_table.filter(logs_table["user"] != "self").filter(logs_table["message"] != "")
+logs_table.write.mode("overwrite").csv("./result")

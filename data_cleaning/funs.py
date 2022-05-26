@@ -67,10 +67,7 @@ def flat(l):
 
 def map_remove_message_some(line):
     """
-    移除message中不必要的信息
-    1、 message_id
-    2、 回复事件
-    3、 @ 事件
+    移除message中除face以外所有的CQ
     :param line:
     :return:
     """
@@ -78,15 +75,12 @@ def map_remove_message_some(line):
     # 移除 message_id
     message = message[0:message.rfind("(")]
     # 移除 回复 事件
-    result = re.compile(r"(\[CQ:reply,id=\d+])+").findall(line)
+    result = re.compile(r"(\[CQ:\w+,[\w!@#$%^…￥&()_=+-/*\"'‘’“”,.<>?！？《》、：:|\\]+])").findall(message)
     for i in result:
-        print(i)
-        line = line.replace(i, "")
-    # 移除 @ 事件
-    result = re.compile(r"(\[CQ:at,qq=\w+])+").findall(line)
-    for i in result:
-        print(i)
-        line = line.replace(i, "")
+        if "[CQ:face," in i:
+            continue
+        message = message.replace(i, "")
+
 
     return Row(
         time=line["_1"],
