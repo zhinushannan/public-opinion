@@ -27,6 +27,5 @@ while i < len(logs_list):
     else:
         i += 1
 
-logs_table = spark.createDataFrame(data=logs_list).rdd.map(map_remove_message_some).toDF()
-logs_table = logs_table.filter(logs_table["user"] != "self").filter(logs_table["message"] != "")
+logs_table = spark.createDataFrame(data=logs_list).rdd.map(map_remove_message_some).filter(lambda log: log["user" != "self"] and log["message"] != "" and "[CQ:json," not in str(log["message"])).toDF()
 logs_table.write.mode("overwrite").csv("./result")

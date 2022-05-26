@@ -81,7 +81,6 @@ def map_remove_message_some(line):
             continue
         message = message.replace(i, "")
 
-
     return Row(
         time=line["_1"],
         group=line["_2"],
