@@ -65,17 +65,34 @@ def flat(l):
             yield from flat(k)
 
 
-def map_remove_message_id(line):
+def map_remove_message_some(line):
     """
-    移除消息ID
+    移除message中不必要的信息
+    1、 message_id
+    2、 回复事件
+    3、 @ 事件
     :param line:
     :return:
     """
     message = str(line["_4"])
+    # 移除 message_id
     message = message[0:message.rfind("(")]
+    # 移除 回复 事件
+    result = re.compile(r"(\[CQ:reply,id=\d+])+").findall(line)
+    for i in result:
+        print(i)
+        line = line.replace(i, "")
+    # 移除 @ 事件
+    result = re.compile(r"(\[CQ:at,qq=\w+])+").findall(line)
+    for i in result:
+        print(i)
+        line = line.replace(i, "")
+
     return Row(
         time=line["_1"],
         group=line["_2"],
         user=line["_3"],
         message=message
     )
+
+
