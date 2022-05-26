@@ -4,6 +4,11 @@ from pyspark.sql.types import Row
 
 
 def filter_logs(line):
+    """
+    过滤掉“上传文件”、“成员加入”、“成员离开”三类事件
+    :param line:
+    :return:
+    """
     match_upload = re.search(r"(^\[\S+ \S+]) \[INFO]: 群 (\S+) 内 ([\s\S]+) 上传了文件: ([\s\S]+)", line)
     match_member_add = re.search(r"(^\[\S+ \S+]) \[INFO]: 新成员 (\S+) 进入了群 ([\s\S]+)", line)
     match_member_leave = re.search(r"(^\[\S+ \S+]) \[INFO]: 成员 (\S+) 离开了群 ([\s\S]+)", line)
@@ -15,6 +20,11 @@ def filter_logs(line):
 
 
 def map_logs(line):
+    """
+    将过滤后的日志的发消息和收消息的事件构成新的RDD
+    :param line:
+    :return:
+    """
     match_send = re.search(r"(^\[\S+ \S+]) \[INFO]: 发送群 (\S+) 的消息: ([\s\S]+)", line)
     match_get = re.search(r"(^\[\S+ \S+]) \[INFO]: 收到群 (\S+) 内 ([\s\S]+) 的消息: ([\s\S]+)", line)
 
@@ -43,6 +53,11 @@ def map_logs(line):
 
 
 def flat(l):
+    """
+    构建新自增列
+    :param l:
+    :return:
+    """
     for k in l:
         if not isinstance(k, (list, tuple)):
             yield k
@@ -51,6 +66,11 @@ def flat(l):
 
 
 def map_remove_message_id(line):
+    """
+    移除消息ID
+    :param line:
+    :return:
+    """
     message = str(line["_4"])
     message = message[0:message.rfind("(")]
     return Row(
