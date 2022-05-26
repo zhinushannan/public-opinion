@@ -48,3 +48,14 @@ def flat(l):
             yield k
         else:
             yield from flat(k)
+
+
+def map_remove_message_id(line):
+    message = str(line["_4"])
+    message = message[0:message.rfind("(")]
+    return Row(
+        time=line["_1"],
+        group=line["_2"],
+        user=line["_3"],
+        message=message
+    )

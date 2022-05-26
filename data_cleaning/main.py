@@ -2,7 +2,7 @@ from __future__ import print_function, division
 
 from pyspark.sql import SparkSession
 
-from data_cleaning.funs import filter_logs, map_logs, flat
+from data_cleaning.funs import filter_logs, map_logs, flat, map_remove_message_id
 
 """  新建spark应用  """
 spark = SparkSession.builder.master("local").appName("app").getOrCreate()
@@ -27,6 +27,6 @@ while i < len(logs_list):
     else:
         i += 1
 
-logs_table = spark.createDataFrame(data=logs_list, schema=["time", "group", "user", "message"]).drop("_5")
-logs_table = logs_table.filter(logs_table['user'] != 'self')
-logs_table.show()
+logs_table = spark.createDataFrame(data=logs_list).rdd.map(map_remove_message_id).toDF()
+logs_table = logs_table.filter(logs_table["user"] != "self")
+
