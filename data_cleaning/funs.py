@@ -80,7 +80,7 @@ def map_remove_message_some(line):
         if "[CQ:face," in i:
             continue
         message = message.replace(i, "")
-
+    message = message.replace(" ", "")
     return Row(
         time=line["_1"],
         group=line["_2"],
@@ -88,4 +88,10 @@ def map_remove_message_some(line):
         message=message
     )
 
+
+def filter_message(line):
+    user = str(line["user"])
+    message = str(line["message"])
+
+    return user != "self" and len(message) != 0 and "[CQ:json," not in message
 

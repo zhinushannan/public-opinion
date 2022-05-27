@@ -2,14 +2,14 @@ from __future__ import print_function, division
 
 from pyspark.sql import SparkSession
 
-from data_cleaning.funs import filter_logs, map_logs, flat, map_remove_message_some
+from data_cleaning.funs import filter_logs, map_logs, flat, map_remove_message_some, filter_message
 
 """  新建spark应用  """
 spark = SparkSession.builder.master("local").appName("app").getOrCreate()
 sc = spark.sparkContext
 
 """  读取文件并建立dataframe  """
-files = sc.textFile("./2022-05-23.log")
+files = sc.textFile("./logs/2022-05-26.log")
 
 logs = files.filter(filter_logs).map(map_logs)
 
@@ -27,5 +27,6 @@ while i < len(logs_list):
     else:
         i += 1
 
-logs_table = spark.createDataFrame(data=logs_list).rdd.map(map_remove_message_some).filter(lambda log: log["user" != "self"] and log["message"] != "" and "[CQ:json," not in str(log["message"])).toDF()
+logs_table = spark.createDataFrame(data=logs_list).rdd.map(map_remove_message_some).filter(filter_message).toDF()
+
 logs_table.write.mode("overwrite").csv("./result")
