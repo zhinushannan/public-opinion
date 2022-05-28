@@ -11,7 +11,6 @@ def map_remove_face_cq(line):
     return message
 
 
-jieba.enable_paddle()
 jieba.load_userdict("../jieba_dict/dict.txt")
 
 
@@ -26,6 +25,9 @@ def map_jieba(line):
         all.append(i)
     return Row(
         raw=line,
-        cut_hmm=str(result)[1:-1],
-        cut_all=str(all)[1:-1]
+        # cut_hmm=str(result)[1:-1],
+        # cut_all=str(all)[1:-1],
+        cut_hmm=result,
+        cut_all=all,
+        id=1
     )

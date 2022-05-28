@@ -1,4 +1,9 @@
-a = "123456"
+import jieba
+import jieba.posseg as pseg
 
-print(a[1:-1])
+jieba.enable_paddle()
+jieba.load_userdict("./jieba_dict/dict.txt")
 
+words = pseg.cut("老板，我想要一瓶花露水。.", use_paddle=True)
+for word, flag in words:
+    print(word, flag)

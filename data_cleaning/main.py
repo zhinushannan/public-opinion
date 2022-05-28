@@ -9,7 +9,9 @@ spark = SparkSession.builder.master("local").appName("app").getOrCreate()
 sc = spark.sparkContext
 
 """  读取文件并建立dataframe  """
+# files = sc.textFile("./logs/2022-05-25.log")
 files = sc.textFile("./logs/2022-05-26.log")
+# files = sc.textFile("./logs/2022-05-27.log")
 
 logs = files.filter(filter_logs).map(map_logs)
 
