@@ -14,3 +14,7 @@ def map_build_face_df(line):
         id=1,
         face=face
     )
+
+
+def map_emotion(line):
+    pass

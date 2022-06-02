@@ -31,3 +31,15 @@ def map_jieba(line):
         cut_all=all,
         id=1
     )
+
+
+filter_list = []
+with open("../jieba_dict/filter_dict.txt") as fp:
+    filter_list.extend(fp.read().split("\n"))
+
+
+def filter_dict(line):
+    key = line[0]
+    if key in filter_list:
+        return False
+    return True
