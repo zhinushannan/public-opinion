@@ -1,5 +1,9 @@
 from __future__ import print_function, division
 
+import findspark
+
+findspark.init()
+
 from pyspark.sql import SparkSession
 
 from data_cleaning.funs import filter_logs, map_logs, flat, map_remove_message_some, filter_message
