@@ -13,9 +13,7 @@ spark = SparkSession.builder.master("local").appName("app").getOrCreate()
 sc = spark.sparkContext
 
 """  读取文件并建立dataframe  """
-# files = sc.textFile("./logs/2022-05-25.log")
-files = sc.textFile("./logs/2022-05-26.log")
-# files = sc.textFile("./logs/2022-05-27.log")
+files = sc.textFile("../logs/*.log")
 
 logs = files.filter(filter_logs).map(map_logs)
 
@@ -35,4 +33,4 @@ while i < len(logs_list):
 
 logs_table = spark.createDataFrame(data=logs_list).rdd.map(map_remove_message_some).filter(filter_message).toDF()
 
-logs_table.write.mode("overwrite").csv("./result")
+logs_table.write.mode("overwrite").csv("../result")
