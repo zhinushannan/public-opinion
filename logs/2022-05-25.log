@@ -361,34 +361,7 @@ https://kdocs.cn/l/ct6fr1wGWHc0 (-430748098)
 [2022-05-25 12:53:40] [INFO]: 收到群 新蜂生活超市(854452883) 内 偷你一根土豆丝(1332388071) 的消息: 投票的 (-1800840160) 
 [2022-05-25 12:53:55] [INFO]: 收到群 新蜂生活超市(854452883) 内 无邪(2337969094) 的消息: &#91;菜汪&#93;请使用最新版手机QQ体验新功能 (-475108170) 
 [2022-05-25 12:54:12] [INFO]: 收到群 潘安湖二手物品转卖群(949682820) 内 两清(2602449961) 的消息: [CQ:reply,id=855903035][CQ:at,qq=2602449961] 已出 (1141062573) 
-[2022-05-25 12:54:12] [INFO]: 处置WS命令时发生无法恢复的异常：interface conversion: interface {} is nil, not uint32
-goroutine 90581 [running]:
-runtime/debug.Stack()
-	runtime/debug/stack.go:24 +0x65
-github.com/Mrs4s/go-cqhttp/server.(*wsConn).handleRequest.func1()
-	github.com/Mrs4s/go-cqhttp/server/websocket.go:414 +0x45
-panic({0xab33a0, 0xc0006fffb0})
-	runtime/panic.go:1038 +0x215
-github.com/Mrs4s/go-cqhttp/coolq.(*CQBot).ConvertContentMessage(0xab6640, {0xc0005d0070, 0x2, 0x8}, 0x0)
-	github.com/Mrs4s/go-cqhttp/coolq/cqcode.go:822 +0x1177
-github.com/Mrs4s/go-cqhttp/coolq.(*CQBot).CQGetMessage(0x3, 0x5dd52f)
-	github.com/Mrs4s/go-cqhttp/coolq/api.go:1576 +0x8f1
-github.com/Mrs4s/go-cqhttp/modules/api.(*Caller).call(0xc000479320, {0xc0005dd50c, 0x7}, {0xc6d200, 0xc0006ccbe0})
-	github.com/Mrs4s/go-cqhttp/modules/api/api.go:173 +0x1a5
-github.com/Mrs4s/go-cqhttp/modules/api.(*Caller).Call(0xc000479320, {0xc0005dd50c, 0x7}, {0xc6d200, 0xc0006ccbe0})
-	github.com/Mrs4s/go-cqhttp/modules/api/caller.go:34 +0xaa
-github.com/Mrs4s/go-cqhttp/server.(*wsConn).handleRequest(0xc000633290, 0xc0002e0360, {0xc0005dd500, 0x51, 0x6fe})
-	github.com/Mrs4s/go-cqhttp/server/websocket.go:421 +0x525
-github.com/Mrs4s/go-cqhttp/server.(*websocketClient).listenAPI.func2(0xc00045c6c0)
-	github.com/Mrs4s/go-cqhttp/server/websocket.go:268 +0x95
-created by github.com/Mrs4s/go-cqhttp/server.(*websocketClient).listenAPI
-	github.com/Mrs4s/go-cqhttp/server/websocket.go:266 +0x1b2
- 
-[2022-05-25 12:54:12] [WARNING]: 监听反向WS Universal时出现错误: read tcp 10.0.4.15:55126->49.234.28.122:8088: use of closed network connection 
-[2022-05-25 12:54:12] [WARNING]: 向反向WS Universal服务器推送 Event 时出现错误: write tcp 10.0.4.15:55126->49.234.28.122:8088: use of closed network connection 
 [2022-05-25 12:54:15] [INFO]: 收到群 新蜂生活超市(854452883) 内 无邪(2337969094) 的消息: 可以考虑陪你 (2057780492) 
-[2022-05-25 12:54:15] [INFO]: 开始尝试连接到反向WebSocket Universal服务器: ws://49.234.28.122:8088/onebot/v11/ws 
-[2022-05-25 12:54:15] [INFO]: 已连接到反向WebSocket Universal服务器 ws://49.234.28.122:8088/onebot/v11/ws 
 [2022-05-25 12:54:20] [INFO]: 收到群 新蜂生活超市(854452883) 内 无邪(2337969094) 的消息: [CQ:image,file=39ecdb58c1dba4b6d89f3b981f146422.image,subType=7] (228593050) 
 [2022-05-25 12:54:26] [INFO]: 收到群 潘安湖二手物品转卖群(949682820) 内 两清(2602449961) 的消息: [CQ:reply,id=1405321950][CQ:at,qq=2602449961] 已出 (-586520041) 
 [2022-05-25 12:54:41] [INFO]: 收到群 新蜂生活超市(854452883) 内 偷你一根土豆丝(1332388071) 的消息: 俺有博哥/斜眼笑 (-1658908661) 

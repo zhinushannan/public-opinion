@@ -655,33 +655,6 @@ https://meeting.tencent.com/dm/p5YP30hqPF40
 N95  20个独立包装新10r
 同碗福咸蛋黄拌面2r[CQ:image,file=09d7e960436c8286f5b8ab1c62779d35.image,subType=0] (-992326395) 
 [2022-05-29 19:15:43] [INFO]: 收到群 潘安湖二手物品转卖群(949682820) 内 出租麻将(1975749013) 的消息: [CQ:reply,id=718548009][CQ:at,qq=1975749013] 已出 (-1277330029) 
-[2022-05-29 19:15:43] [INFO]: 处置WS命令时发生无法恢复的异常：interface conversion: interface {} is nil, not uint32
-goroutine 188646 [running]:
-runtime/debug.Stack()
-	runtime/debug/stack.go:24 +0x65
-github.com/Mrs4s/go-cqhttp/server.(*wsConn).handleRequest.func1()
-	github.com/Mrs4s/go-cqhttp/server/websocket.go:414 +0x45
-panic({0xab33a0, 0xc000197560})
-	runtime/panic.go:1038 +0x215
-github.com/Mrs4s/go-cqhttp/coolq.(*CQBot).ConvertContentMessage(0xab6640, {0xc0006cae20, 0x2, 0x8}, 0x0)
-	github.com/Mrs4s/go-cqhttp/coolq/cqcode.go:822 +0x1177
-github.com/Mrs4s/go-cqhttp/coolq.(*CQBot).CQGetMessage(0x3, 0x67002f)
-	github.com/Mrs4s/go-cqhttp/coolq/api.go:1576 +0x8f1
-github.com/Mrs4s/go-cqhttp/modules/api.(*Caller).call(0xc0004d91c0, {0xc00067000c, 0x7}, {0xc6d200, 0xc0006cc1e0})
-	github.com/Mrs4s/go-cqhttp/modules/api/api.go:173 +0x1a5
-github.com/Mrs4s/go-cqhttp/modules/api.(*Caller).Call(0xc0004d91c0, {0xc00067000c, 0x7}, {0xc6d200, 0xc0006cc1e0})
-	github.com/Mrs4s/go-cqhttp/modules/api/caller.go:34 +0xaa
-github.com/Mrs4s/go-cqhttp/server.(*wsConn).handleRequest(0xc000633290, 0xc0002e0360, {0xc000670000, 0x52, 0x315f})
-	github.com/Mrs4s/go-cqhttp/server/websocket.go:421 +0x525
-github.com/Mrs4s/go-cqhttp/server.(*websocketClient).listenAPI.func2(0xc00045c6c0)
-	github.com/Mrs4s/go-cqhttp/server/websocket.go:268 +0x95
-created by github.com/Mrs4s/go-cqhttp/server.(*websocketClient).listenAPI
-	github.com/Mrs4s/go-cqhttp/server/websocket.go:266 +0x1b2
- 
-[2022-05-29 19:15:43] [WARNING]: 监听反向WS Universal时出现错误: read tcp 10.0.4.15:53938->49.234.28.122:8088: use of closed network connection 
-[2022-05-29 19:15:47] [WARNING]: 向反向WS Universal服务器推送 Event 时出现错误: write tcp 10.0.4.15:53938->49.234.28.122:8088: use of closed network connection 
-[2022-05-29 19:15:50] [INFO]: 开始尝试连接到反向WebSocket Universal服务器: ws://49.234.28.122:8088/onebot/v11/ws 
-[2022-05-29 19:15:50] [INFO]: 已连接到反向WebSocket Universal服务器 ws://49.234.28.122:8088/onebot/v11/ws 
 [2022-05-29 19:18:11] [INFO]: 收到群 潘安湖二手物品转卖群(949682820) 内 Gin.(2449078245) 的消息: kato散粉全新 50出[CQ:image,file=35e788773cda0a94584405477dab60bb.image] (593649666) 
 [2022-05-29 19:18:12] [INFO]: 收到群 潘安湖二手物品转卖群(949682820) 内 Gin.(2449078245) 的消息: 还有一半多 保质期到23年 35r[CQ:image,file=c9c495ee90fd978471d642ede926350c.image] (1415925908) 
 [2022-05-29 19:26:30] [INFO]: 收到群 潘安湖二手物品转卖群(949682820) 内 半二两(1370245020) 的消息: 出增高架 (-29496032) 

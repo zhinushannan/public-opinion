@@ -23,33 +23,6 @@
 ——来自群管理员（1772203969）的编辑 (-2095904556) 
 [2022-05-28 00:10:21] [INFO]: 成员 💛🖤(841750569) 离开了群 潘安湖二手物品转卖群(949682820). 
 [2022-05-28 00:18:05] [INFO]: 收到群 潘安湖二手物品转卖群(949682820) 内 Brett(3348299505) 的消息: [CQ:reply,id=-1890485207][CQ:at,qq=3348299505] 已出 (841924803) 
-[2022-05-28 00:18:05] [INFO]: 处置WS命令时发生无法恢复的异常：interface conversion: interface {} is nil, not uint32
-goroutine 147605 [running]:
-runtime/debug.Stack()
-	runtime/debug/stack.go:24 +0x65
-github.com/Mrs4s/go-cqhttp/server.(*wsConn).handleRequest.func1()
-	github.com/Mrs4s/go-cqhttp/server/websocket.go:414 +0x45
-panic({0xab33a0, 0xc0001a2180})
-	runtime/panic.go:1038 +0x215
-github.com/Mrs4s/go-cqhttp/coolq.(*CQBot).ConvertContentMessage(0xab6640, {0xc0001066a0, 0x2, 0x8}, 0x0)
-	github.com/Mrs4s/go-cqhttp/coolq/cqcode.go:822 +0x1177
-github.com/Mrs4s/go-cqhttp/coolq.(*CQBot).CQGetMessage(0x3, 0x9282f)
-	github.com/Mrs4s/go-cqhttp/coolq/api.go:1576 +0x8f1
-github.com/Mrs4s/go-cqhttp/modules/api.(*Caller).call(0xc0004a6060, {0xc00009280c, 0x7}, {0xc6d200, 0xc00073caa0})
-	github.com/Mrs4s/go-cqhttp/modules/api/api.go:173 +0x1a5
-github.com/Mrs4s/go-cqhttp/modules/api.(*Caller).Call(0xc0004a6060, {0xc00009280c, 0x7}, {0xc6d200, 0xc00073caa0})
-	github.com/Mrs4s/go-cqhttp/modules/api/caller.go:34 +0xaa
-github.com/Mrs4s/go-cqhttp/server.(*wsConn).handleRequest(0xc000633290, 0xc0002e0360, {0xc000092800, 0x54, 0x706})
-	github.com/Mrs4s/go-cqhttp/server/websocket.go:421 +0x525
-github.com/Mrs4s/go-cqhttp/server.(*websocketClient).listenAPI.func2(0xc00045c6c0)
-	github.com/Mrs4s/go-cqhttp/server/websocket.go:268 +0x95
-created by github.com/Mrs4s/go-cqhttp/server.(*websocketClient).listenAPI
-	github.com/Mrs4s/go-cqhttp/server/websocket.go:266 +0x1b2
- 
-[2022-05-28 00:18:05] [WARNING]: 监听反向WS Universal时出现错误: read tcp 10.0.4.15:48868->49.234.28.122:8088: use of closed network connection 
-[2022-05-28 00:18:07] [WARNING]: 向反向WS Universal服务器推送 Event 时出现错误: write tcp 10.0.4.15:48868->49.234.28.122:8088: use of closed network connection 
-[2022-05-28 00:18:10] [INFO]: 开始尝试连接到反向WebSocket Universal服务器: ws://49.234.28.122:8088/onebot/v11/ws 
-[2022-05-28 00:18:10] [INFO]: 已连接到反向WebSocket Universal服务器 ws://49.234.28.122:8088/onebot/v11/ws 
 [2022-05-28 00:18:21] [INFO]: 收到群 潘安湖二手物品转卖群(949682820) 内 MEEK.(3032750852) 的消息: [CQ:image,file=eb975e1afb5550e8885debdd4e0cf6ee.image,subType=0] (1160376405) 
 [2022-05-28 00:19:18] [INFO]: 收到群 潘安湖二手物品转卖群(949682820) 内 Brett(3348299505) 的消息: 出书架 10r，可小刀[CQ:image,file=4612d95235f0af9318f88ef2d581ff3b.image] (-615684618) 
 [2022-05-28 00:19:26] [INFO]: 收到群 潘安湖二手物品转卖群(949682820) 内 MEEK.(3032750852) 的消息: [CQ:image,file=92a333522f726bc5ee741ca5aefa24b8.image,subType=0] (-1404414624) 
@@ -310,33 +283,6 @@ A自取 (-1711911978)
 [2022-05-28 12:16:22] [INFO]: 收到群 潘安湖二手物品转卖群(949682820) 内 A代刷网课 出脚本 期末线上题库 猴博士全套(851949205) 的消息: [CQ:forward,id=wWGIP5E2qXJcZT+OAGGF7dfyu7Wp2Mbky8nFTnFS7tq1vb919dJGovLH7MjAwb9Z] (366803453) 
 [2022-05-28 12:16:22] [INFO]: 收到群 潘安湖二手物品转卖群(949682820) 内 A代刷网课 出脚本 期末线上题库 猴博士全套(851949205) 的消息: 出2021级马克思考试宝线上题库，正确率99%。进群打八折，老用户可享更多折扣，线上背题，事半功倍，花两小时背题轻松取得90+ (-2057051028) 
 [2022-05-28 12:18:19] [INFO]: 收到群 潘安湖二手物品转卖群(949682820) 内 Brett(3348299505) 的消息: [CQ:reply,id=-1932154809][CQ:at,qq=3348299505] 已出 (-228272902) 
-[2022-05-28 12:18:19] [INFO]: 处置WS命令时发生无法恢复的异常：interface conversion: interface {} is nil, not uint32
-goroutine 158526 [running]:
-runtime/debug.Stack()
-	runtime/debug/stack.go:24 +0x65
-github.com/Mrs4s/go-cqhttp/server.(*wsConn).handleRequest.func1()
-	github.com/Mrs4s/go-cqhttp/server/websocket.go:414 +0x45
-panic({0xab33a0, 0xc0007c7950})
-	runtime/panic.go:1038 +0x215
-github.com/Mrs4s/go-cqhttp/coolq.(*CQBot).ConvertContentMessage(0xab6640, {0xc0006cb5f0, 0x2, 0x8}, 0x0)
-	github.com/Mrs4s/go-cqhttp/coolq/cqcode.go:822 +0x1177
-github.com/Mrs4s/go-cqhttp/coolq.(*CQBot).CQGetMessage(0x3, 0x52d82f)
-	github.com/Mrs4s/go-cqhttp/coolq/api.go:1576 +0x8f1
-github.com/Mrs4s/go-cqhttp/modules/api.(*Caller).call(0xc0004a7940, {0xc00052d80c, 0x7}, {0xc6d200, 0xc00073c730})
-	github.com/Mrs4s/go-cqhttp/modules/api/api.go:173 +0x1a5
-github.com/Mrs4s/go-cqhttp/modules/api.(*Caller).Call(0xc0004a7940, {0xc00052d80c, 0x7}, {0xc6d200, 0xc00073c730})
-	github.com/Mrs4s/go-cqhttp/modules/api/caller.go:34 +0xaa
-github.com/Mrs4s/go-cqhttp/server.(*wsConn).handleRequest(0xc000633290, 0xc0002e0360, {0xc00052d800, 0x54, 0x17a9})
-	github.com/Mrs4s/go-cqhttp/server/websocket.go:421 +0x525
-github.com/Mrs4s/go-cqhttp/server.(*websocketClient).listenAPI.func2(0xc00045c6c0)
-	github.com/Mrs4s/go-cqhttp/server/websocket.go:268 +0x95
-created by github.com/Mrs4s/go-cqhttp/server.(*websocketClient).listenAPI
-	github.com/Mrs4s/go-cqhttp/server/websocket.go:266 +0x1b2
- 
-[2022-05-28 12:18:19] [WARNING]: 监听反向WS Universal时出现错误: read tcp 10.0.4.15:39922->49.234.28.122:8088: use of closed network connection 
-[2022-05-28 12:18:22] [WARNING]: 向反向WS Universal服务器推送 Event 时出现错误: write tcp 10.0.4.15:39922->49.234.28.122:8088: use of closed network connection 
-[2022-05-28 12:18:25] [INFO]: 开始尝试连接到反向WebSocket Universal服务器: ws://49.234.28.122:8088/onebot/v11/ws 
-[2022-05-28 12:18:25] [INFO]: 已连接到反向WebSocket Universal服务器 ws://49.234.28.122:8088/onebot/v11/ws 
 [2022-05-28 12:23:12] [INFO]: 收到群 潘安湖二手物品转卖群(949682820) 内 无爱者自由(3435533851) 的消息: [CQ:image,file=7ba9e8fb433de2538fa9699f6fb47f9a.image,subType=0] (-990250343) 
 [2022-05-28 12:26:50] [INFO]: 收到群 潘安湖二手物品转卖群(949682820) 内 伊人莫相忘(2940409154) 的消息: 出白象火鸡面 茄皇袋装泡面  都是3.5/包，买多可优惠/吃糖/吃糖 (-1275147761) 
 [2022-05-28 12:32:06] [INFO]: 发送群 18软件2班在线群(780548179) 的消息: 健康打卡自动提醒
@@ -740,33 +686,6 @@ https://meeting.tencent.com/dm/gSHtTVUGNRxL
 [2022-05-28 19:13:57] [INFO]: 收到群 21软件2班(626284843) 内 王明玮(2990317540) 的消息: 5月29日（本周日）上6月16日（16周周四）的课  (2122423192) 
 [2022-05-28 19:15:17] [INFO]: 收到群 潘安湖二手物品转卖群(949682820) 内 ZZ(2129543694) 的消息: 出零食[CQ:image,file=a5f04fca7fb8f8c53004c57664bc27a9.image,subType=0] (-1076934357) 
 [2022-05-28 19:23:57] [INFO]: 收到群 潘安湖二手物品转卖群(949682820) 内 代拿代买代写代课（期末闭关不接单）(3176627878) 的消息: [CQ:reply,id=-926385731][CQ:at,qq=3176627878] 已有 (650516625) 
-[2022-05-28 19:23:57] [INFO]: 处置WS命令时发生无法恢复的异常：interface conversion: interface {} is nil, not uint32
-goroutine 165814 [running]:
-runtime/debug.Stack()
-	runtime/debug/stack.go:24 +0x65
-github.com/Mrs4s/go-cqhttp/server.(*wsConn).handleRequest.func1()
-	github.com/Mrs4s/go-cqhttp/server/websocket.go:414 +0x45
-panic({0xab33a0, 0xc0001ae810})
-	runtime/panic.go:1038 +0x215
-github.com/Mrs4s/go-cqhttp/coolq.(*CQBot).ConvertContentMessage(0xab6640, {0xc0002208f0, 0x2, 0x8}, 0x0)
-	github.com/Mrs4s/go-cqhttp/coolq/cqcode.go:822 +0x1177
-github.com/Mrs4s/go-cqhttp/coolq.(*CQBot).CQGetMessage(0x3, 0xec02f)
-	github.com/Mrs4s/go-cqhttp/coolq/api.go:1576 +0x8f1
-github.com/Mrs4s/go-cqhttp/modules/api.(*Caller).call(0xc0004d9660, {0xc0000ec00c, 0x7}, {0xc6d200, 0xc0006cc4b0})
-	github.com/Mrs4s/go-cqhttp/modules/api/api.go:173 +0x1a5
-github.com/Mrs4s/go-cqhttp/modules/api.(*Caller).Call(0xc0004d9660, {0xc0000ec00c, 0x7}, {0xc6d200, 0xc0006cc4b0})
-	github.com/Mrs4s/go-cqhttp/modules/api/caller.go:34 +0xaa
-github.com/Mrs4s/go-cqhttp/server.(*wsConn).handleRequest(0xc000633290, 0xc0002e0360, {0xc0000ec000, 0x53, 0x576})
-	github.com/Mrs4s/go-cqhttp/server/websocket.go:421 +0x525
-github.com/Mrs4s/go-cqhttp/server.(*websocketClient).listenAPI.func2(0xc00045c6c0)
-	github.com/Mrs4s/go-cqhttp/server/websocket.go:268 +0x95
-created by github.com/Mrs4s/go-cqhttp/server.(*websocketClient).listenAPI
-	github.com/Mrs4s/go-cqhttp/server/websocket.go:266 +0x1b2
- 
-[2022-05-28 19:23:57] [WARNING]: 监听反向WS Universal时出现错误: read tcp 10.0.4.15:55864->49.234.28.122:8088: use of closed network connection 
-[2022-05-28 19:24:02] [WARNING]: 向反向WS Universal服务器推送 Event 时出现错误: write tcp 10.0.4.15:55864->49.234.28.122:8088: use of closed network connection 
-[2022-05-28 19:24:05] [INFO]: 开始尝试连接到反向WebSocket Universal服务器: ws://49.234.28.122:8088/onebot/v11/ws 
-[2022-05-28 19:24:05] [INFO]: 已连接到反向WebSocket Universal服务器 ws://49.234.28.122:8088/onebot/v11/ws 
 [2022-05-28 19:28:29] [INFO]: 收到群 新蜂生活超市(854452883) 内 小胡(960919037) 的消息: 找个代购 (2098132644) 
 [2022-05-28 19:32:12] [INFO]: 收到群 潘安湖二手物品转卖群(949682820) 内 ZZ(2129543694) 的消息: 出26mm   32mm卷发棒各一[CQ:image,file=668f6d082f7f9529d32dfb2aa18cf359.image] (1371613191) 
 [2022-05-28 19:32:42] [INFO]: 收到群 潘安湖二手物品转卖群(949682820) 内 出生鸡蛋纯牛奶(1701489767) 的消息: 找人拼一箱💰37[CQ:image,file=6420429a5604ed37da01ecc23341b739.image,subType=0] (-1048693354) 
